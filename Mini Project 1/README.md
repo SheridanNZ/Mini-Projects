@@ -64,4 +64,4 @@ This project highlights my skills in web development and APIs, while supporting 
 
 1. Clone the repository to your local machine.
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/SheridanNZ/Mini-Projects.git
