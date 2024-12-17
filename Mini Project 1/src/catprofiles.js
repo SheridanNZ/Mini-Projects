@@ -25,14 +25,14 @@ document.querySelector('.purple-btn').addEventListener('click', function () {  /
   populateCatCards() will update the page with the cards that match the selected criteria */
 
   const filteredCats = catProfiles.filter(cat => {
-    // Case-insensitive gender match
+    // Case-insensitive gender match, had issues with case-sensitivity... to solve that
     const matchesGender = selectedGenderFilter === 'any' || cat.gender.toLowerCase() === selectedGenderFilter;
 
     // Location match
     const matchesLocation = selectedLocationFilter === 'any' || cat.location === selectedLocationFilter;
 
-    const matchesAge = selectedAgeFilters.includes('any') || selectedAgeFilters.some(ageFilter => {
-      if (ageFilter === '0-2') return cat.age >= 0 && cat.age <= 2;
+    const matchesAge = selectedAgeFilters.includes('any') || selectedAgeFilters.some(ageFilter => { // if 'any' not checked, look to see what age checkbox is selected using .some
+      if (ageFilter === '0-2') return cat.age >= 0 && cat.age <= 2; // checks if current age filter is equal to the string '0-2', if 'true' will b eexecute, if not, return false
       if (ageFilter === '3-4') return cat.age >= 3 && cat.age <= 4;
       if (ageFilter === '5-6') return cat.age >= 5 && cat.age <= 6;
       if (ageFilter === '7-8') return cat.age >= 7 && cat.age <= 8;
@@ -40,8 +40,8 @@ document.querySelector('.purple-btn').addEventListener('click', function () {  /
       return false;
     });
     
-    return matchesGender && matchesLocation && matchesAge;
-  });
+    return matchesGender && matchesLocation && matchesAge; // returns final 'result' based on the three criteria/conditions, must match all three conditions
+  }); // && checks both sides are true, if both are, then returns 'true', otherwise 'false
 
   populateCatCards(filteredCats);
 });
@@ -67,12 +67,12 @@ function getRandomItem(arr) {
 
 // Function to generate random age between min and max age
 function getRandomAge() {
-  return Math.floor(Math.random() * (maxAge - minAge + 1)) + minAge;
+  return Math.floor(Math.random() * (maxAge - minAge + 1)) + minAge; // generate random number between minAge & maxAge
 }
 
-// Fetch data from API & populate profiles
+// Fetch data from API & populate profiles (TheCatAPI)
 fetch(apiUrl)
-  .then(response => response.json())
+  .then(response => response.json()) // convert api to json
   .then(data => {
     // Generate dynamic cat profiles from API data
     const cats = data.map(item => ({
@@ -83,21 +83,22 @@ fetch(apiUrl)
       location: getRandomItem(catLocations),
     }));
     
-    catProfiles.push(...cats); // Store profiles for filtering
-    populateCatCards(cats); // Populate the cat cards dynamically based on API data
+    catProfiles.push(...cats); // Store random generated profiles for filtering in catProfile array
+    populateCatCards(cats); // Populate the cat cards w generated cat profiles
   })
-  .catch(error => console.error('Error fetching cat data:', error));
+  .catch(error => console.error('Error fetching cat data:', error)); // in case any errors for fetch, log it
 
 // Function to populate cat cards
 function populateCatCards(cats) {
   const container = document.getElementById('catProfilesContainer');
-  container.innerHTML = ''; 
+  container.innerHTML = ''; // clear existing cat profiles
 
   if (cats.length === 0) {
-    container.innerHTML = '<p>No cats available for this filter criteria.</p>'; 
+    container.innerHTML = '<p>No cats available for this filter criteria.</p>'; // if no cat cards match criteria of the filter selected
   } else {
-    cats.forEach(cat => {
-      const cardHTML = `
+    cats.forEach(cat => { 
+      // cfeate cat cards
+      const cardHTML = ` 
         <div class="col-md-3">
           <div class="card">
             <img src="${cat.image}" class="card-img-top" alt="${cat.name}">
@@ -111,8 +112,7 @@ function populateCatCards(cats) {
           </div>
         </div>
       `;
-      container.innerHTML += cardHTML; // Append card to container
+      container.innerHTML += cardHTML; // Append/add card to container
     });
   }
 }
-
