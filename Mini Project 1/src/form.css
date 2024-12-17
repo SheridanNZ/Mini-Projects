@@ -115,10 +115,10 @@ form input:focus, form textarea:focus, form select:focus {
 /* Radio Buttons */
 form input[type="radio"] {
     margin-right: 0.5rem;
-    vertical-align: middle; /* Ensures the radio button is aligned with the text */
+    vertical-align: middle; /* Ensures radio button is aligned with text */
 }
 
-/* Aligning radio buttons and labels properly */
+/* Align radio buttons & labels properly */
 form label {
     display: inline-flex;
     align-items: center;
@@ -158,10 +158,10 @@ form fieldset p {
 
 /* Footer Styling */
 footer {
-    text-align: center;  /* Centers text in the footer */
-    padding: 20px 0;  /* Adds padding on top and bottom */
-    background-color: #f9f9f9;  /* Light background for footer */
-    border-top: 2px solid lightgrey; /* Optional border for visual separation */
+    text-align: center; 
+    padding: 20px 0;  
+    background-color: #f9f9f9; 
+    border-top: 2px solid lightgrey; 
 }
 
 .footer-content {

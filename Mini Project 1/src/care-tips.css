@@ -137,10 +137,10 @@ section {
 }
 
 footer {
-    text-align: center;  /* Centers text in the footer */
-    padding: 20px 0;  /* Adds padding on top and bottom */
-    background-color: #f9f9f9;  /* Light background for footer */
-    border-top: 2px solid lightgrey; /* Optional border for visual separation */
+    text-align: center; 
+    padding: 20px 0; 
+    background-color: #f9f9f9; 
+    border-top: 2px solid lightgrey;
 }
 
 .footer-content {

@@ -1,4 +1,4 @@
-// Function to get the cat ID from the URL
+// Function to get cat ID from the URL
 function getCatIdFromUrl() {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get('catId');
@@ -19,7 +19,7 @@ function populateCatId() {
         document.getElementById('displayCatId').value = selectedCatId; 
     }
 }
-// Show or hide the additional cats section based on selection
+// Show or hide additional cats section based on selection
 additionalCatsSelect.addEventListener('change', function () {
     if (this.value === 'yes') {
         moreCatsSection.style.display = 'block'; // Show extra section
@@ -40,7 +40,7 @@ form.addEventListener('submit', function (event) {
     requiredFields.forEach((field) => {
         if (!field.value.trim()) {
             isFormValid = false;
-            firstInvalidField = firstInvalidField || field; // Keep track of first invalid field
+            firstInvalidField = firstInvalidField || field; // Keep track of first invalid field to show user
 
             // Show invalid field
             field.classList.add('error');

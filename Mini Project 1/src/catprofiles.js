@@ -1,6 +1,6 @@
 const apiUrl = `https://api.thecatapi.com/v1/images/search?limit=24&api_key=live_3whYvIZes7ryabN71U114cV658iMNA9h2A8ejYPRr8jCmWzhotvIJbzsQS6Biw1v`;
 
-// Arrays to randomly select/generate names, gender, ages, and locations for the cat profile cards
+// Arrays to randomly select/generate names, gender, age & locations for cat profile cards
 const catNames = ['Whiskers', 'Shadow', 'Bella', 'Mittens', 'Simba', 'Luna', 'Oliver', 'Ajax', 'Tiger', 'Scout', 
   'Leo', 'Tom', 'Garfield', 'Sylvester', 'Summer', 'Ember', 'Suzy', 'Scratchy', 'Nala', 'Milo', 'Felix', 'Binx', 
   'Smokey-Jo', 'Salem', 'MooMoo', 'Bop', 'Fluffy', 'Lady', 'Lucky', 'Katniss', 'Bagheera', 'Diego', 'Meowth', 
@@ -46,15 +46,15 @@ document.querySelector('.purple-btn').addEventListener('click', function () {
 
 // Event listener for reset button (using querySelector instead of getElementById)
 document.querySelector('.reset-btn').addEventListener('click', function () {
-  // Reset the filters to their default values
+  // Reset filters to default values
   document.getElementById('genderFilter').value = 'any';
   document.getElementById('locationFilter').value = 'any';
   document.querySelectorAll('input[name="age"]').forEach(checkbox => checkbox.checked = false);
 
-  // Ensure the "Any Age" checkbox is checked after reset
+  // Ensure "Any Age" checkbox is checked after reset
   document.querySelector('input[name="age"][value="any"]').checked = true;
 
-  // Reset the displayed cats to show all
+  // Reset displayed cats to show all
   populateCatCards(catProfiles);
 });
 
@@ -68,7 +68,7 @@ function getRandomAge() {
   return Math.floor(Math.random() * (maxAge - minAge + 1)) + minAge;
 }
 
-// Fetch data from API and populate profiles
+// Fetch data from API & populate profiles
 fetch(apiUrl)
   .then(response => response.json())
   .then(data => {
@@ -109,7 +109,7 @@ function populateCatCards(cats) {
           </div>
         </div>
       `;
-      container.innerHTML += cardHTML; // Append the card to container
+      container.innerHTML += cardHTML; // Append card to container
     });
   }
 }
