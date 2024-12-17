@@ -1,0 +1,167 @@
+body,
+html {
+    background-image: url(assets/background.png);
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: top left;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px 10px 10px 10px;
+    line-height: 1.6;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Banner Styling */
+.banner {
+    text-align: center;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navigation Bar Styling */
+nav.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling - all sections to have borders */
+section {
+    border: 2px solid lightgrey; 
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.why-adopt h2 {
+    color: #8A2BE2;
+}
+
+.why-adopt ul {
+    list-style-type: square;
+}
+
+.match h3 {
+    color: purple;
+}
+
+/* Cat Care Styling */
+.cat-care {
+    border: 2px solid lightgrey;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.cat-care-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Styling - video container */
+.video-container {
+    flex: 1; 
+    max-width: 560px;
+    margin-right: 200px; /* Space between vid & lists */
+}
+
+.care-lists {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.list-container {
+    display: flex;
+    gap: 20px;
+}
+
+.list-column {
+    width: 50%;
+}
+
+/* Styling - list headings */
+.list-column h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: purple;
+}
+
+.list-column ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.list-column li {
+    margin-bottom: 8px;
+}
+
+.faq dt {
+    color: purple;
+}
+
+@media (max-width: 768px) {
+    .cat-care-container {
+        flex-direction: column;
+    }
+
+    .video-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .care-lists {
+        gap: 10px;
+    }
+
+    .list-container {
+        flex-direction: column;
+    }
+}
+
+footer {
+    text-align: center;  /* Centers text in the footer */
+    padding: 20px 0;  /* Adds padding on top and bottom */
+    background-color: #f9f9f9;  /* Light background for footer */
+    border-top: 2px solid lightgrey; /* Optional border for visual separation */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px; 
+    justify-content: center;
+}
+
+.social-icons a {
+    display: block;
+}
+
+.social-icons img {
+    width: 30px; 
+    height: auto;
+}

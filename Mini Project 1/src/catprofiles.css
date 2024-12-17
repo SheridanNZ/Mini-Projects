@@ -1,0 +1,359 @@
+body, html {
+    background-image: url(assets/background.png);
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: top left;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    line-height: 1.6;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Banner Styling */
+.banner {
+    text-align: center;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navigation Bar Styling */
+nav.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cat-profiles-header h2 {
+    font-family: Arial, sans-serif;
+    color: purple;
+    margin: 0;
+    font-size: 50px;
+}
+
+/* Container for 'Cat Profiles' and filter */
+.cat-profiles .cat-profiles-header {
+    background-color: rgba(255, 255, 255, 0.8); 
+    border: 2px solid lightgrey;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center; 
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+    margin-top: 20px; 
+}
+
+.filter-container label {
+    font-size: 16px; 
+    margin-right: 10px; 
+}
+
+.filter-container select {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+/* Button Styling */
+input[type="button"], button {
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 4px;
+    font-size: 16px; 
+    cursor: pointer;
+}
+
+.purple-btn {
+    background-color: #8A2BE2;
+    color: white; 
+}
+
+.purple-btn:hover {
+    background-color: #6A1B9A; 
+}
+
+/* Reset Button Styling */
+input[type="reset"] {
+    background-color: grey; 
+    color: white; 
+    padding: 10px 20px;
+    border: none; 
+    border-radius: 4px; 
+    font-size: 16px; 
+    cursor: pointer; 
+}
+
+input[type="reset"]:hover {
+    background-color: slategray;
+}
+
+/* Style for checkboxes */
+.age-filter input[type="checkbox"] {
+    appearance: none; /* to remove default checkbox appearance */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #BB78FF;
+    border-radius: 4px;
+    outline: none;
+    position: relative;
+    background-color: white; /* Default background */
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+/* When checked, add background & change checkmark color */
+.age-filter input[type="checkbox"]:checked {
+    background-color: #BB78FF;
+    border-color: #BB78FF; 
+}
+
+.age-filter input[type="checkbox"]:hover {
+    background-color: #BB78FF;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Main Content Styling */
+main {
+    margin-top: 120px;
+}
+
+/* Age Filter Section */
+.age-filter {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* When checked, add background & change tick colour */
+.age-filter input[type="checkbox"]:checked {
+    background-color: #BB78FF80;
+    border-color: #4B0082;
+}
+
+/* When checkbox checked, show a 'tick' */
+.age-filter input[type="checkbox"]:checked::before {
+    content: "✓";
+    color: white; 
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+}
+
+.age-filter input[type="checkbox"]:hover {
+    background-color: #BB78FF;
+}
+
+/* Style for filter dropdowns */
+select {
+    width: 100px;
+    min-width: 100px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+}
+
+.filter-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for the labels (gender / location) to make them align w dropdowns */
+label {
+    font-size: 20px;
+    margin-right: 5px;
+    color: #000000;
+    display: inline-block;
+    line-height: 3;
+}
+
+select:hover {
+    border-color: purple;
+}
+
+.featured-cats-title {
+    text-align: center; 
+    width: 100%;
+}
+
+.featured-cats-title h2 {
+    font-family: Arial, sans-serif;
+    color: purple;
+    margin: 0;
+    font-size: 50px;
+}
+
+.card-container {
+    width: 80%;
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 0;
+}
+
+/* Card Styling */
+.card {
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 .2rem .4rem #BB78FF80;
+    transition: .4s ease-in;
+    background: white;
+    height: 350px; 
+}
+
+/* Card Hover Effect */
+.card:hover {
+    background: #eeaef1;
+}
+
+/* Card Heading */
+.card-heading {
+    color: blueviolet;
+    margin-bottom: .5rem;
+}
+
+/* Card Body */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #fff;
+    height: calc(100% - 200px);
+}
+
+/* Card Image */
+.card-img-top {
+    border-radius: 8px 8px 0 0; 
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* "About Me" button - static cards */
+.card .btn-primary {
+    background-color: #BB78FF80; 
+    border-color: #BB78FF80; 
+    color: white; 
+}
+
+.card .btn-primary:hover {
+    background-color: #BB78FF;
+    border-color: #BB78FF; 
+}
+
+/* "About Me" button - dynamic cards */
+#catProfilesContainer .card .btn-primary {
+    background-color: #BB78FF80;
+    border-color: #BB78FF80;
+    color: white;
+}
+
+#catProfilesContainer .card .btn-primary:hover {
+    background-color: #BB78FF;
+    border-color: #BB78FF; 
+}
+
+/* "Adopt Me" button Modal */
+.modal .btn-success {
+    background-color: #8A2BE2;
+    border-color: #8A2BE2; 
+    color: white;
+}
+
+.modal .btn-success:hover {
+    background-color: #6A1B9A;
+    border-color: #6A1B9A; 
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Modal Images */
+.modal-body .carousel-inner img {
+    width: 100%;  
+    height: 400px; 
+    object-fit: cover; 
+}
+
+/* Footer Styling */
+footer {
+    text-align: center; 
+    padding: 20px 0;
+    background-color: #f9f9f9; 
+    border-top: 2px solid lightgrey;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px; 
+    justify-content: center;
+}
+
+.social-icons a {
+    display: block;
+}
+
+.social-icons img {
+    width: 30px; 
+    height: auto;
+}

@@ -1,0 +1,226 @@
+/* Banner Styling */
+.banner {
+    text-align: center;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Nav Bar Styling */
+nav.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body,
+html {
+    background-image: url(assets/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Mission Section Styling */
+.mission {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid lightgrey;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+.mission h2 {
+    color: purple;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.mission p {
+    color: dimgray;
+    padding-right: 20px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Success Stories Section */
+.success-stories {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid lightgrey;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 40px); 
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.success-stories h2 {
+    color: purple;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.carousel-inner {
+    min-height: 550px;
+}
+
+.story-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.story-text {
+    width: 50%;
+    padding-right: 20px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.story-image {
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-caption {
+    display: none;
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover; 
+    display: block; 
+}
+
+.carousel-item {
+    height: 500px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel {
+    overflow: hidden;
+}
+
+
+/* Newsletter Section */
+.newsletter {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid lightgrey;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: center;
+}
+
+.newsletter h2 {
+    color: purple;
+    margin-bottom: 15px;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    width: 70%;
+    margin-bottom: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #BB78FF80;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: grey;
+}
+
+/* Sponsors Section */
+.sponsors {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid lightgrey;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+.sponsors h2 {
+    color: purple;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.sponsors .sponsor-logos {
+    display: flex;
+    justify-content: space-around;
+}
+.sponsors .sponsor-logos img {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px 0;  
+    background-color: #f9f9f9; 
+    border-top: 2px solid lightgrey; 
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px; 
+    justify-content: center;
+}
+
+.social-icons a {
+    display: block;
+}
+
+.social-icons img {
+    width: 30px; 
+    height: auto;
+}

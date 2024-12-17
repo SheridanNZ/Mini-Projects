@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adoptable cats from Meow & Furever Sanctuary/Shelter across NZ.">
+    <meta name="author" content="SheridanS">
+    <link rel="stylesheet" href="src/catprofiles.css">
+    <link rel="icon" type="image/x-icon" href="src/assets/paw_favicon1.ico">
+    <title>M&F Cat Profiles</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Meow & Furever</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Adopt</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="cat_profiles.html">Cat Profiles</a></li>
+                            <li><a class="dropdown-item" href="form.html">Adoption Process</a></li>
+                            <li><a class="dropdown-item" href="care_tips.html">Caring for Your New Cat | FAQs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Make a Difference</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="donate.html">Donate</a></li>
+                            <li><a class="dropdown-item" href="volunteer.html">Volunteer</a></li>
+                            <li><a class="dropdown-item" href="#">Help Us Care</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Banner -->
+    <header class="banner">
+        <img src="src/assets/banner_transparent.png" alt="Meow & Furever!" class="banner-image">
+    </header>
+
+    <main>
+        <section class="cat-profiles">
+            <section class="cat-profiles-header">
+                <h2>Cat Profiles</h2>
+                <p>View our cats available for adoption on this page. Click the "About Me" button on their profile
+                    to learn more, see additional pictures, and determine if this kitty is the perfect match for you.
+                </p>
+                <!-- Filter -->
+                <div class="filter-container">
+                    <div class="custom-search">
+                        <div class="form-row">
+                           <!-- Filter by Age -->
+<div class="form-group">
+    <label for="ageFilter" class="form-label"><strong>Filter Cats by Age</strong></label>
+    <div class="age-filter">
+        <div class="form-check">
+            <input type="checkbox" name="age" value="0-2" id="age0to2">
+            <label for="age0to2" class="form-check-label">0-2 years</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" name="age" value="3-4" id="age3to4">
+            <label for="age3to4" class="form-check-label">3-4 years</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" name="age" value="5-6" id="age5to6">
+            <label for="age5to6" class="form-check-label">5-6 years</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" name="age" value="7-8" id="age7to8">
+            <label for="age7to8" class="form-check-label">7-8 years</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" name="age" value="9-10+" id="age9to10">
+            <label for="age9to10" class="form-check-label">9-10+ years</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" name="age" value="any" id="anyAge" checked>
+            <label for="anyAge" class="form-check-label">Any Age</label>
+        </div>
+    </div>
+</div>
+
+                        <!-- Filter Container -->
+                        <div class="filter-container">
+                            <!-- Gender Filter Dropdown -->
+                            <label for="genderFilter">Gender:</label>
+                            <select id="genderFilter" class="form-control">
+                                <option value="any">Any Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+
+                            <!-- Location Filter Dropdown -->
+                            <label for="locationFilter">Location:</label>
+                            <select id="locationFilter" class="form-control">
+                                <option value="any">Any Location</option>
+                                <option value="Auckland">Auckland</option>
+                                <option value="Whangarei">Whangarei</option>
+                                <option value="Hamilton">Hamilton</option>
+                                <option value="Wellington">Wellington</option>
+                                <option value="Christchurch">Christchurch</option>
+                                <option value="Queenstown">Queenstown</option>
+                                <option value="Dunedin">Dunedin</option>
+                                <option value="Blenheim">Blenheim</option>
+                            </select>
+                            <!-- Add Filter Buttons -->
+                            <input type="button" class="purple-btn" value="Filter">
+                            <input type="reset" class="reset-btn" value="Reset">
+                        </div>
+            </section>
+            <!-- Featured Cats Title -->
+            <div class="featured-cats-title">
+                <h2>Featured Cats</h2>
+            </div>
+            </div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <img src="src\assets\cat1-img1.jpg" class="card-img-top" alt="cat-adopt-pic">
+                    <div class="card-body">
+                        <h5 class="card-title">Name: Sunny</h5>
+                        <p class="card-text">Age: 2</p>
+                        <p class="card-text">Gender: Male</p>
+                        <p class="card-text">Location: Auckland</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cat1Modal">About
+                            Me</button>
+                    </div>
+                </div>
+                <!-- Modal for Cat 1 -->
+                <div class="modal fade" id="cat1Modal" tabindex="-1" aria-labelledby="cat1ModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="cat1ModalLabel">Sunny</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="cat1Carousel" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="src\assets\cat1-img1.jpg" class="d-block w-100"
+                                                alt="Cat 1 Image 1">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="src\assets\cat1-img2.jpg" class="d-block w-100"
+                                                alt="Cat 1 Image 2">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="src\assets\cat1-img3.jpg" class="d-block w-100"
+                                                alt="Cat 1 Image 3">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#cat1Carousel"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#cat1Carousel"
+                                        data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <!-- Cat Profile Details -->
+                                <h5>Personality:</h5>
+                                <p>Sunny is a 2-year-old ginger and white short-haired beauty with a heart full of love
+                                    to give! He’s fully desexed, wormed, and flea treated, so he’s all set to settle
+                                    into his forever home. Sunny is a sweet and affectionate kitty who loves a good
+                                    cuddle session, and he’ll happily curl up beside you for some quality bonding time.
+                                    Though he gets along well with other cats, he can be a bit shy around dogs, so he’d
+                                    prefer a peaceful home where he can feel comfortable and safe.</p>
+                                <h5>Backstory:</h5>
+                                <p>Sunny came to us at Meow & Furever after being found roaming alone by a kind-hearted
+                                    person. Despite his rough start, he’s incredibly gentle and ready to find a loving
+                                    family who will shower him with attention and care. If you're looking for a
+                                    companion who loves snuggles and has a calm, friendly demeanor, Sunny might just be
+                                    your purrfect match!</p>
+
+                                <!-- "Adopt Me" Button in Modal -->
+                                <a href="form.html?catId=1A223" class="btn btn-success">Adopt Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hidden field for Cat ID -->
+                <input type="hidden" id="catIdField" name="catId">
+
+                <div class="card">
+                    <img src="src\assets\cat2-img1.jpg" class="card-img-top" alt="cat-adopt-pic">
+                    <div class="card-body">
+                        <h5 class="card-title">Name: Sugar</h5>
+                        <p class="card-text">Age: 5</p>
+                        <p class="card-text">Gender: Male</p>
+                        <p class="card-text">Location: Whangarei</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cat2Modal">About
+                            Me</button>
+                    </div>
+                </div>
+
+                <!-- Modal for Cat 2 -->
+                <div class="modal fade" id="cat2Modal" tabindex="-1" aria-labelledby="cat2ModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="cat2ModalLabel">Sugar</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Carousel for images -->
+                                <div id="cat2Carousel" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="src\assets\cat2-img1.jpg" class="d-block w-100"
+                                                alt="Cat 2 Image 1">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="src\assets\cat2-img2.jpg" class="d-block w-100"
+                                                alt="Cat 2 Image 2">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="src\assets\cat2-img3.jpg" class="d-block w-100"
+                                                alt="Cat 2 Image 2">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#cat2Carousel"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#cat2Carousel"
+                                        data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <!-- Cat Profile Details -->
+                                <h5>Personality:</h5>
+                                <p><strong>Meet Sugar!</strong> Sugar is a shy and gentle 5-year-old boy with a soft
+                                    white coat and small dark patches. Despite his calm, timid nature, once he feels
+                                    safe and comfortable, Sugar loves to sit by your side and relax while watching TV.
+                                    He may take a little time to warm up, but with patience and understanding, you'll
+                                    earn his trust and form a quiet, special bond.</p>
+                                <h5>Backstory:</h5>
+                                <p>Sugar has had a rough start to life and is now seeking the TLC he deserves. He’s
+                                    missing his tail and has a unique white nose, which will require sunblock to protect
+                                    him from the sun. Sugar is best suited for a quiet, indoor home where he can feel
+                                    secure and loved, away from loud noises or busy environments. If you're looking for
+                                    a patient and sweet companion who just needs a little extra care, Sugar could be the
+                                    perfect addition to your family.</p>
+
+                                <!-- "Adopt Me" Button in Modal -->
+                                <a href="form.html?catId=2B2336" class="btn btn-success">Adopt Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Static Cat Cards-->
+                <div class="card">
+                    <img src="src\assets\cat3.jpg" class="card-img-top" alt="cat-adopt-pic">
+                    <div class="card-body">
+                        <h5 class="card-title">Name: Daisy</h5>
+                        <p class="card-text">Age: 1</p>
+                        <p class="card-text">Gender: Female</p>
+                        <p class="card-text">Location: Auckland</p>
+                        <button class="btn btn-primary">About Me</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="src\assets\cat4.jpg" class="card-img-top" alt="cat-adopt-pic">
+                    <div class="card-body">
+                        <h5 class="card-title">Name: Tofu</h5>
+                        <p class="card-text">Age: 5</p>
+                        <p class="card-text">Gender: Male</p>
+                        <p class="card-text">Location: Queenstown</p>
+                        <button class="btn btn-primary">About Me</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Dynamic Cat Cards - Populated from JS & Bootstrap-->
+            <div class="container">
+                <div class="row" id="catProfilesContainer">
+                    <!-- Cat cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Meow & Furever, All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                    <img src="https://cdn1.iconfinder.com/data/icons/social-media-set-for-free/32/facebook-1024.png"
+                        alt="Facebook Logo">
+                </a>
+                <a href="https://www.instagram.com" target="_blank" title="Instagram">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png"
+                        alt="Instagram Logo">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="src/catprofiles.js"></script>
+</body>
+
+</html>
