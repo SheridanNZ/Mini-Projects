@@ -1,4 +1,4 @@
-const apiUrl = `https://api.thecatapi.com/v1/images/search?limit=24&api_key=live_3whYvIZes7ryabN71U114cV658iMNA9h2A8ejYPRr8jCmWzhotvIJbzsQS6Biw1v`;
+const apiUrl = `https://api.thecatapi.com/v1/images/search?limit=24&api_key=live_3whYvIZes7ryabN71U114cV658iMNA9h2A8ejYPRr8jCmWzhotvIJbzsQS6Biw1v`; // TheCatAPI
 
 // Arrays to randomly select/generate names, gender, age & locations for cat profile cards
 const catNames = ['Whiskers', 'Shadow', 'Bella', 'Mittens', 'Simba', 'Luna', 'Oliver', 'Ajax', 'Tiger', 'Scout', 
@@ -11,16 +11,18 @@ const minAge = 1;
 const maxAge = 10;
 
 // Store cats profiles for filtering later
-const catProfiles = [];
+const catProfiles = []; // each cat profile is object containing various propertiy such as name, age...
 
-// Ensure the "Any Age" checkbox is checked by default when the page loads
+// Ensure the "Any Age" checkbox is checked by default when the page loads to avoid cat profiles not showing on load and for filtering
 document.querySelector('input[name="age"][value="any"]').checked = true;
 
 // Event listener for filter button (using querySelector instead of getElementById)
-document.querySelector('.purple-btn').addEventListener('click', function () {
+document.querySelector('.purple-btn').addEventListener('click', function () {  // on click of filter options
   const selectedGenderFilter = document.getElementById('genderFilter').value.toLowerCase(); // Ensure case-insensitivity
   const selectedLocationFilter = document.getElementById('locationFilter').value;
   const selectedAgeFilters = Array.from(document.querySelectorAll('input[name="age"]:checked')).map(checkbox => checkbox.value);
+  /* retrieves selected values, catprofile.filter() function checks if each cat matches selected values and filter. 
+  populateCatCards() will update the page with the cards that match the selected criteria */
 
   const filteredCats = catProfiles.filter(cat => {
     // Case-insensitive gender match
